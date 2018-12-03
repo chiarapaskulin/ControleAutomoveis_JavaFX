@@ -43,7 +43,7 @@ public class ControllerTelaInicial{
 
     @FXML
     private void editarAutomovel() throws IOException {
-        Parent root = FXMLLoader.load(App.class.getResource("editarAutomovel2.fxml"));
+        Parent root = FXMLLoader.load(App.class.getResource("editarAutomovel.fxml"));
         Stage stg = new Stage();
         stg.setTitle("Editar Automóvel");
         stg.setScene(new Scene(root, 630, 500));
@@ -51,29 +51,48 @@ public class ControllerTelaInicial{
     }
 
     @FXML
-    private void novoAbastecimento(){
-        stack.getChildren().clear();
-        stack.getChildren().add(getNode("novoAbastecimento.fxml"));
+    private void novoAbastecimento() throws IOException{
+        Parent root = FXMLLoader.load(App.class.getResource("abastecerAutomovel.fxml"));
+        Stage stg = new Stage();
+        stg.setTitle("Abastecer Automóvel");
+        stg.setScene(new Scene(root, 630, 500));
+        stg.showAndWait();
     }
 
     @FXML
-    private void novoAutomovel(){
-        stack.getChildren().clear();
-        stack.getChildren().add(getNode("novoAutomovel.fxml"));
-    }
-    @FXML
-    private void listarAbastecimentos(ActionEvent event){
-
-    }
-
-    @FXML
-    private void listarAutomoveis(ActionEvent event){
-
+    private void novoAutomovel() throws IOException{
+        Parent root = FXMLLoader.load(App.class.getResource("cadastrarAutomovel.fxml"));
+        Stage stg = new Stage();
+        stg.setTitle("Cadastrar Automóvel");
+        stg.setScene(new Scene(root, 630, 500));
+        stg.showAndWait();
     }
 
     @FXML
-    private void verAuto(ActionEvent event){
+    private void listarAbastecimentos() throws IOException{
+        Parent root = FXMLLoader.load(App.class.getResource("visualizarAbastecimentos.fxml"));
+        Stage stg = new Stage();
+        stg.setTitle("Visualizar Abastecimentos");
+        stg.setScene(new Scene(root, 630, 500));
+        stg.showAndWait();
+    }
 
+    @FXML
+    private void listarAutomoveis() throws IOException{
+        Parent root = FXMLLoader.load(App.class.getResource("visualizarTodosAutomoveis.fxml"));
+        Stage stg = new Stage();
+        stg.setTitle("Visualizar Todos Automóveis");
+        stg.setScene(new Scene(root, 630, 500));
+        stg.showAndWait();
+    }
+
+    @FXML
+    private void verAuto() throws IOException{
+        Parent root = FXMLLoader.load(App.class.getResource("visualizarAutomovel2.fxml"));
+        Stage stg = new Stage();
+        stg.setTitle("Visualizar Automóvel");
+        stg.setScene(new Scene(root, 630, 500));
+        stg.showAndWait();
     }
 
     public Node getNode(String node){

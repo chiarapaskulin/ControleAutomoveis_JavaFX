@@ -15,7 +15,7 @@ public class App extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(App.class.getResource("telainicial.fxml"));
+        Parent root = FXMLLoader.load(App.class.getResource("telaInicial.fxml"));
         primaryStage.setTitle("Hello World");
         //primaryStage.getIcons().add(new Image("file:imagens/CHOGIWWRITTING-02.png"));
         primaryStage.setScene(new Scene(root, 630, 500));

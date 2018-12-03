@@ -3,6 +3,7 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -16,10 +17,10 @@ public class ConjuntoAbastecimentos {
 
     public String addAbastecimento(Abastecimento abast){
         try{
-            Date data1 = abast.getData();
+            LocalDate data1 = abast.getData();
 
             for(int i=0; i<abastecimentos.size(); i++){
-                Date data2 = abastecimentos.get(i).getData();
+                LocalDate data2 = abastecimentos.get(i).getData();
                 if(data1.compareTo(data2)<0){
                     abastecimentos.add(i-1, abast);
                     return "";

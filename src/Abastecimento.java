@@ -1,4 +1,5 @@
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
 import java.util.Date;
 
 public class Abastecimento {
@@ -8,7 +9,7 @@ public class Abastecimento {
     }
 
     private tipoDeComubustivel tipoCombustivel;
-    private Date data;
+    private LocalDate data;
     private double valorOdometro;
     private double qtLitros;
     private double custoTotal;
@@ -18,7 +19,7 @@ public class Abastecimento {
         return tipoCombustivel;
     }
 
-    public Date getData() {
+    public LocalDate getData() {
         return data;
     }
 
@@ -42,7 +43,7 @@ public class Abastecimento {
         this.tipoCombustivel = tipoCombustivel;
     }
 
-    public void setData(Date data) {
+    public void setData(LocalDate data) {
         this.data = data;
     }
 

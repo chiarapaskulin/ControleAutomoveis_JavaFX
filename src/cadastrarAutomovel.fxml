@@ -6,7 +6,6 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-
 <Pane fx:id="paneCadAuto" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #6fcdb6;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Label layoutX="128.0" layoutY="14.0" prefHeight="46.0" prefWidth="345.0" text="CADASTRAR AUTOMÓVEL">
@@ -60,7 +59,7 @@
       <TextField fx:id="txtFabricante" layoutX="290.0" layoutY="200.0" onAction="#escreveFabricante" />
       <TextField fx:id="txtCapTanque" layoutX="290.0" layoutY="248.0" onAction="#escreveCapTanque" />
       <TextField fx:id="txtValOd" layoutX="290.0" layoutY="297.0" onAction="#escreveValOd" />
-      <Button fx:id="botaoCadastrar" layoutX="439.0" layoutY="344.0" mnemonicParsing="false" onAction="#cadastrarAuto" text="CADASTRAR">
+      <Button fx:id="botaoCadastrar" layoutX="439.0" layoutY="344.0" mnemonicParsing="false" onAction="#cadastrarAutomovel" text="CADASTRAR">
          <font>
             <Font name="Arial Black" size="13.0" />
          </font>
