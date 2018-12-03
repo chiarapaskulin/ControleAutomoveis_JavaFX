@@ -43,11 +43,11 @@ public class ControllerTelaInicial{
 
     @FXML
     private void editarAutomovel() throws IOException {
-        Parent root = FXMLLoader.load(App.class.getResource("testando.fxml"));
-        Stage oi = new Stage();
-        oi.setTitle("Editar Automóvel");
-        oi.setScene(new Scene(root, 300, 275));
-        oi.showAndWait();
+        Parent root = FXMLLoader.load(App.class.getResource("editarAutomovel2.fxml"));
+        Stage stg = new Stage();
+        stg.setTitle("Editar Automóvel");
+        stg.setScene(new Scene(root, 630, 500));
+        stg.showAndWait();
     }
 
     @FXML
