@@ -4,18 +4,27 @@ import java.util.Date;
 
 public class Abastecimento {
 
-    public enum tipoDeComubustivel{
-        Aditivada, Comum, Diesel, GNV, Etanol;
-    }
-
-    private tipoDeComubustivel tipoCombustivel;
+    private String tipoCombustivel;
     private LocalDate data;
     private double valorOdometro;
     private double qtLitros;
     private double custoTotal;
     private double precoPorLitro;
 
-    public tipoDeComubustivel getTipoCombustivel() {
+    public Abastecimento(String tipoCombustivel, LocalDate data, Double valorOdometro, Double qtLitros, Double custoTotal, Double precoPorLitro){
+        if(tipoCombustivel==null || tipoCombustivel.equals("") || data==null || data.equals("") || valorOdometro==null || valorOdometro.equals("") || valorOdometro<0 || qtLitros==null || qtLitros.equals("") || qtLitros<=0 || custoTotal==null || custoTotal.equals("") || custoTotal<=0 || precoPorLitro==null || precoPorLitro.equals("") || precoPorLitro<=0){
+            throw new IllegalArgumentException("Valor inválido");
+        }else{
+            this.tipoCombustivel = tipoCombustivel;
+            this.data = data;
+            this.valorOdometro = valorOdometro;
+            this.qtLitros = qtLitros;
+            this.custoTotal = custoTotal;
+            this.precoPorLitro = precoPorLitro;
+        }
+    }
+
+    public String getTipoCombustivel() {
         return tipoCombustivel;
     }
 
@@ -39,7 +48,7 @@ public class Abastecimento {
         return precoPorLitro;
     }
 
-    public void setTipoCombustivel(tipoDeComubustivel tipoCombustivel) {
+    public void setTipoCombustivel(String tipoCombustivel) {
         this.tipoCombustivel = tipoCombustivel;
     }
 

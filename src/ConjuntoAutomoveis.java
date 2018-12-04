@@ -19,6 +19,10 @@ public class ConjuntoAutomoveis {
         }
     }
 
+    public List<Automovel> getAutomoveis(){
+        return automoveis;
+    }
+
     public String toString(){
         StringBuilder str = new StringBuilder();
         str.append("Lista de Automóveis cadastrados: \n");

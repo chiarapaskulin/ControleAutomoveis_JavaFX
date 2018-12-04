@@ -4,20 +4,24 @@ import java.util.List;
 public class Automovel {
     private String placa;
     private String modelo;
-    private int ano;
+    private Integer ano;
     private String fabricante;
-    private int capacidadeTanque;
+    private Integer capacidadeTanque;
     private double valorOdometro;
     private List<Abastecimento> abastecimentos;
 
-    public Automovel(String placa, String modelo, int ano, String fabricante, int capacidadeTanque, double valorOdometro){
-        this.placa = placa;
-        this.modelo = modelo;
-        this.ano = ano;
-        this.fabricante = fabricante;
-        this.capacidadeTanque = capacidadeTanque;
-        this.valorOdometro = valorOdometro;
-        abastecimentos = new ArrayList<>();
+    public Automovel(String placa, String modelo, Integer ano, String fabricante, Integer capacidadeTanque, Double valorOdometro){
+        if(placa==null || placa.equals("") || modelo==null || modelo.equals("") || ano==null || ano<=0 || ano.equals("") || fabricante==null || fabricante.equals("") || capacidadeTanque==null || capacidadeTanque<=0 || capacidadeTanque.equals("") || valorOdometro==null || valorOdometro<0 || valorOdometro.equals("")){
+            throw new IllegalArgumentException("Valor inválido");
+        }else{
+            this.placa = placa;
+            this.modelo = modelo;
+            this.ano = ano;
+            this.fabricante = fabricante;
+            this.capacidadeTanque = capacidadeTanque;
+            this.valorOdometro = valorOdometro;
+            abastecimentos = new ArrayList<>();
+        }
     }
 
     public String getPlaca() {

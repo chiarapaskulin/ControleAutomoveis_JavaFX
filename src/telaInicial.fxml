@@ -50,7 +50,7 @@
       </Pane>
       <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
          <children>
-            <Button fx:id="listarAbast" alignment="CENTER" layoutX="92.0" layoutY="12.0" mnemonicParsing="false" onAction="#listarAbastecimentos" prefHeight="76.0" prefWidth="417.0" snapToPixel="false" text="LISTAR TODOS ABASTECIMENTOS DE UM AUTOMÓVEL" textAlignment="CENTER">
+            <Button fx:id="listarAbast" alignment="CENTER" layoutX="92.0" layoutY="12.0" mnemonicParsing="false" onAction="#listarAbastecimentos" prefHeight="76.0" prefWidth="417.0" snapToPixel="false" text="LISTAR TODOS ABASTECIMENTOS" textAlignment="CENTER">
                <font>
                   <Font name="Arial Black" size="13.0" />
                </font>

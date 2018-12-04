@@ -15,23 +15,31 @@ public class ConjuntoAbastecimentos {
         abastecimentos = new ArrayList<>();
     }
 
-    public String addAbastecimento(Abastecimento abast){
+    public boolean addAbastecimento(Abastecimento abast){
         try{
             LocalDate data1 = abast.getData();
 
+            //se a data que eu tenho (data1) é depois, retorna positivo
+            //se a data que eu passei por parâmetro (data2) é depois, retorna negativo
+            //se a data que eu tenho (data1) for antes, retorna negativo
             for(int i=0; i<abastecimentos.size(); i++){
                 LocalDate data2 = abastecimentos.get(i).getData();
                 if(data1.compareTo(data2)<0){
                     abastecimentos.add(i-1, abast);
-                    return "";
+                    return true;
                 }
             }
 
             abastecimentos.add(abast);
-            return "";
+            return true;
         }catch(Exception e) {
-            return "Abastecimento inválido";
+            System.out.println("Abastecimento inválido");
+            return false;
         }
+    }
+
+    public List<Abastecimento> getAbastecimentos(){
+        return abastecimentos;
     }
 
     public String toString(){
