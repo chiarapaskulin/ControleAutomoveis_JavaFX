@@ -16,6 +16,9 @@ import java.util.ResourceBundle;
 
 public class ControllerTelaInicial implements Initializable{
 
+    private ConjuntoAutomoveis conjAuto;
+    private ConjuntoAbastecimentos conjAbast;
+
     @FXML
     private GridPane gridTelaInicial;
 
@@ -45,9 +48,22 @@ public class ControllerTelaInicial implements Initializable{
         //TODO
     }
 
+    public void setConjAuto(ConjuntoAutomoveis conjAuto){
+        this.conjAuto = conjAuto;
+    }
+
+    public void setConjAbast(ConjuntoAbastecimentos conjAbast){
+        this.conjAbast = conjAbast;
+    }
+
     @FXML
     private void editarAutomovel() throws IOException {
-        Parent root = FXMLLoader.load(App.class.getResource("editarAutomovel.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("editarAutomovel.fxml"));
+        Parent root = loader.load();
+
+        ControllerEditarAutomovel editarAutomovel = loader.getController();
+        editarAutomovel.setConjAuto(this.conjAuto);
+
         Stage stg = new Stage();
         stg.setTitle("Editar Automóvel");
         stg.setScene(new Scene(root, 630, 500));
@@ -56,7 +72,13 @@ public class ControllerTelaInicial implements Initializable{
 
     @FXML
     private void novoAbastecimento() throws IOException{
-        Parent root = FXMLLoader.load(App.class.getResource("abastecerAutomovel.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("abastecerAutomovel.fxml"));
+        Parent root = loader.load();
+
+        ControllerAbastecerAutomovel abastecerAutomovel = loader.getController();
+        abastecerAutomovel.setConjAuto(this.conjAuto);
+        abastecerAutomovel.setConjAbast(this.conjAbast);
+
         Stage stg = new Stage();
         stg.setTitle("Abastecer Automóvel");
         stg.setScene(new Scene(root, 630, 500));
@@ -65,7 +87,12 @@ public class ControllerTelaInicial implements Initializable{
 
     @FXML
     private void novoAutomovel() throws IOException{
-        Parent root = FXMLLoader.load(App.class.getResource("cadastrarAutomovel.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("cadastrarAutomovel.fxml"));
+        Parent root = loader.load();
+
+        ControllerCadastrarAutomovel cadastrarAutomovel = loader.getController();
+        cadastrarAutomovel.setConjAuto(this.conjAuto);
+
         Stage stg = new Stage();
         stg.setTitle("Cadastrar Automóvel");
         stg.setScene(new Scene(root, 630, 500));
@@ -74,7 +101,12 @@ public class ControllerTelaInicial implements Initializable{
 
     @FXML
     private void listarAbastecimentos() throws IOException{
-        Parent root = FXMLLoader.load(App.class.getResource("visualizarAbastecimentos.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("visualizarAbastecimentos.fxml"));
+        Parent root = loader.load();
+
+        ControllerVisualizarAbastecimentos visualizarAbastecimentos = loader.getController();
+        visualizarAbastecimentos.setConjAbast(this.conjAbast);
+
         Stage stg = new Stage();
         stg.setTitle("Visualizar Abastecimentos");
         stg.setScene(new Scene(root, 630, 500));
@@ -83,7 +115,12 @@ public class ControllerTelaInicial implements Initializable{
 
     @FXML
     private void listarAutomoveis() throws IOException{
-        Parent root = FXMLLoader.load(App.class.getResource("visualizarTodosAutomoveis.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("visualizarTodosAutomoveis.fxml"));
+        Parent root = loader.load();
+
+        ControllerVisualizarTodosAutomoveis visualizarTodosAutomoveis = loader.getController();
+        visualizarTodosAutomoveis.setConjAuto(this.conjAuto);
+
         Stage stg = new Stage();
         stg.setTitle("Visualizar Todos Automóveis");
         stg.setScene(new Scene(root, 630, 500));
@@ -92,7 +129,12 @@ public class ControllerTelaInicial implements Initializable{
 
     @FXML
     private void verAuto() throws IOException{
-        Parent root = FXMLLoader.load(App.class.getResource("visualizarAutomovel2.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("visualizarAutomovel2.fxml"));
+        Parent root = loader.load();
+
+        //ControllerVisualizarAutomovel2 visualizarAutomovel = loader.getController();
+        //visualizarAutomovel.setConjAuto(this.conjAuto);
+
         Stage stg = new Stage();
         stg.setTitle("Visualizar Automóvel");
         stg.setScene(new Scene(root, 630, 500));

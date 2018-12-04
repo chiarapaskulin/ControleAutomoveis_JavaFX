@@ -25,21 +25,9 @@ public class App extends Application{
         ConjuntoAutomoveis autos = new ConjuntoAutomoveis();
         ConjuntoAbastecimentos abastecimentos = new ConjuntoAbastecimentos();
 
-        ControllerCadastrarAutomovel cadastrarAutomovel = loader.getController();
-        cadastrarAutomovel.setConjAuto(autos);
-
-        ControllerAbastecerAutomovel abastecerAutomovel = loader.getController();
-        abastecerAutomovel.setConjAuto(autos);
-        abastecerAutomovel.setConjAbast(abastecimentos);
-
-        ControllerVisualizarAbastecimentos visualizarAbastecimentos = loader.getController();
-        visualizarAbastecimentos.setConjAbast(abastecimentos);
-
-        ControllerVisualizarTodosAutomoveis visualizarTodosAutomoveis = loader.getController();
-        visualizarTodosAutomoveis.setConjAuto(autos);
-
-        ControllerEditarAutomovel editarAutomovel = loader.getController();
-        editarAutomovel.setConjAuto(autos);
+        ControllerTelaInicial telaInicial = loader.getController();
+        telaInicial.setConjAuto(autos);
+        telaInicial.setConjAbast(abastecimentos);
 
         primaryStage.setTitle("Tela Inicial");
         primaryStage.setScene(new Scene(root, 630, 500));

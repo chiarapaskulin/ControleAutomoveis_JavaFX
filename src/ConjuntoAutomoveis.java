@@ -9,11 +9,13 @@ public class ConjuntoAutomoveis {
         automoveis = new ArrayList<>();
     }
 
-    public void addAutomovel(Automovel auto){
+    public boolean addAutomovel(Automovel auto){
         try{
             automoveis.add(auto);
+            return true;
         }catch(Exception e) {
             System.out.println("Automóvel inválido");
+            return false;
         }
     }
 
