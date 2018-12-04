@@ -9,12 +9,11 @@ public class ConjuntoAutomoveis {
         automoveis = new ArrayList<>();
     }
 
-    public String addAutomovel(Automovel auto){
+    public void addAutomovel(Automovel auto){
         try{
             automoveis.add(auto);
-            return "";
         }catch(Exception e) {
-            return "Automóvel inválido";
+            System.out.println("Automóvel inválido");
         }
     }
 

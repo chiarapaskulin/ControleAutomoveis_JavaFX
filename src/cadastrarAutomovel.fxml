@@ -55,12 +55,12 @@
          <Font name="Arial Black" size="14.0"/>
       </font>
    </Label>
-   <TextField fx:id="txtPlaca" layoutX="290.0" layoutY="80.0" onAction="#escrevePlaca"/>
-   <TextField fx:id="txtModelo" layoutX="290.0" layoutY="118.0" onAction="#escreveModelo"/>
-   <TextField fx:id="txtAno" layoutX="289.0" layoutY="158.0" onAction="#escreveAno"/>
-   <TextField fx:id="txtFabricante" layoutX="290.0" layoutY="200.0" onAction="#escreveFabricante"/>
-   <TextField fx:id="txtCapTanque" layoutX="290.0" layoutY="248.0" onAction="#escreveCapTanque"/>
-   <TextField fx:id="txtValOd" layoutX="290.0" layoutY="297.0" onAction="#escreveValOd"/>
+   <TextField fx:id="txtPlaca" layoutX="290.0" layoutY="80.0"/>
+   <TextField fx:id="txtModelo" layoutX="290.0" layoutY="118.0"/>
+   <TextField fx:id="txtAno" layoutX="289.0" layoutY="158.0"/>
+   <TextField fx:id="txtFabricante" layoutX="290.0" layoutY="200.0"/>
+   <TextField fx:id="txtCapTanque" layoutX="290.0" layoutY="248.0"/>
+   <TextField fx:id="txtValOd" layoutX="290.0" layoutY="297.0"/>
    <Button fx:id="botaoCadastrar" layoutX="439.0" layoutY="344.0" mnemonicParsing="false" onAction="#cadastrarAutomovel"
            text="CADASTRAR">
       <font>

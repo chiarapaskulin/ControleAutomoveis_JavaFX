@@ -14,7 +14,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class ControllerTelaInicial{
+public class ControllerTelaInicial implements Initializable{
 
     @FXML
     private GridPane gridTelaInicial;
@@ -40,6 +40,10 @@ public class ControllerTelaInicial{
     @FXML
     private StackPane stack;
 
+    @Override
+    public void initialize(URL url, ResourceBundle rb){
+        //TODO
+    }
 
     @FXML
     private void editarAutomovel() throws IOException {
@@ -100,6 +104,7 @@ public class ControllerTelaInicial{
         try {
             no = FXMLLoader.load(getClass().getResource(node));
         } catch (Exception e) {
+            e.printStackTrace();
         }
         return no;
 

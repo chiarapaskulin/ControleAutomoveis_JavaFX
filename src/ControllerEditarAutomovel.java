@@ -8,57 +8,70 @@ import javafx.scene.layout.Pane;
 
 public class ControllerEditarAutomovel {
 
-    @FXML
-    public Pane paneEditAuto;
+    private ConjuntoAutomoveis conjAuto;
 
     @FXML
-    public ChoiceBox CBlistaplacas;
+    private Pane paneEditAuto;
 
     @FXML
-    TextField txtNovaPlaca;
+    private ChoiceBox CBlistaplacas;
 
     @FXML
-    TextField txtNovoModelo;
+    private TextField txtNovaPlaca;
 
     @FXML
-    TextField txtNovoAno;
+    private TextField txtNovoModelo;
 
     @FXML
-    TextField txtNovoFabricante;
+    private TextField txtNovoAno;
 
     @FXML
-    TextField txtNovaCapTanque;
+    private TextField txtNovoFabricante;
 
     @FXML
-    TextField txtNovoValOd;
+    private TextField txtNovaCapTanque;
 
     @FXML
-    Button botaoEditar;
+    private TextField txtNovoValOd;
 
+    @FXML
+    private Button botaoEditar;
 
-    public void editaPlaca(){
+    public void setConjAuto(ConjuntoAutomoveis conjAuto){
+        this.conjAuto = conjAuto;
+    }
+
+    @FXML
+    private void editaPlaca(){
 
     }
 
-    public void editaModelo(ActionEvent actionEvent) {
+    @FXML
+    private void editaModelo(ActionEvent actionEvent) {
 
     }
 
-    public void editaAno(ActionEvent actionEvent) {
+    @FXML
+    private void editaAno(ActionEvent actionEvent) {
     }
 
-    public void editaFabricante(ActionEvent actionEvent) {
+    @FXML
+    private void editaFabricante(ActionEvent actionEvent) {
     }
 
-    public void editaCapTanque(ActionEvent actionEvent) {
+    @FXML
+    private void editaCapTanque(ActionEvent actionEvent) {
     }
 
-    public void editaValOd(ActionEvent actionEvent) {
+    @FXML
+    private void editaValOd(ActionEvent actionEvent) {
     }
 
-    public void editaAuto(ActionEvent actionEvent) {
+    @FXML
+    private void editaAuto(ActionEvent actionEvent) {
     }
 
-    public void mostraPlacas(MouseEvent mouseEvent) {
+    @FXML
+    private void mostraPlacas(MouseEvent mouseEvent) {
     }
 }
