@@ -7,69 +7,73 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane fx:id="paneAbastAuto" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #6fcdb6;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
-   <children>
-      <Label layoutX="120.0" layoutY="14.0" prefHeight="46.0" prefWidth="348.0" text="ABASTECER AUTOMÓVEL">
-         <font>
-            <Font name="Arial Black" size="24.0" />
-         </font>
-      </Label>
-      <Label layoutX="28.0" layoutY="174.0" prefHeight="22.0" prefWidth="168.0" text="Tipo de combustível:">
-         <font>
-            <Font name="Arial Black" size="14.0" />
-         </font>
-      </Label>
-      <Label layoutX="32.0" layoutY="242.0" prefHeight="22.0" prefWidth="67.0" text="Data:">
-         <font>
-            <Font name="Arial Black" size="14.0" />
-         </font>
-      </Label>
-      <Label layoutX="32.0" layoutY="307.0" prefHeight="22.0" prefWidth="149.0" text="Valor Odômetro:">
-         <font>
-            <Font name="Arial Black" size="14.0" />
-         </font>
-      </Label>
-      <Label layoutX="274.0" layoutY="95.0" prefHeight="22.0" prefWidth="192.0" text="Quantidade de Litros:">
-         <font>
-            <Font name="Arial Black" size="14.0" />
-         </font>
-      </Label>
-      <Label layoutX="278.0" layoutY="174.0" prefHeight="22.0" prefWidth="185.0" text="Custo Total:">
-         <font>
-            <Font name="Arial Black" size="14.0" />
-         </font>
-      </Label>
-      <Label layoutX="278.0" layoutY="242.0" prefHeight="22.0" prefWidth="124.0" text="Preço por Litro:">
-         <font>
-            <Font name="Arial Black" size="14.0" />
-         </font>
-      </Label>
-      <TextField fx:id="txtData" layoutX="36.0" layoutY="265.0" onAction="#defineData" text="yyyy-mm-dd" />
-      <TextField fx:id="txtQtLitros" layoutX="285.0" layoutY="126.0" onAction="#defineQtLitros" />
-      <TextField fx:id="txtCustoTotal" layoutX="285.0" layoutY="203.0" onAction="#defineCustoTotal" />
-      <TextField fx:id="txtPrecoPorLitro" layoutX="285.0" layoutY="265.0" onAction="#definePrecoPorLitro" />
-      <Button fx:id="botaoCadastrar" layoutX="434.0" layoutY="347.0" mnemonicParsing="false" onAction="#abastecerAuto" text="ABASTECER">
-         <font>
-            <Font name="Arial Black" size="13.0" />
-         </font>
-      </Button>
-      <ChoiceBox fx:id="CBplaca" layoutX="36.0" layoutY="126.0" onMouseClicked="#mostraPlacas" prefHeight="25.0" prefWidth="149.0" />
-      <Label layoutX="37.0" layoutY="68.0" prefHeight="22.0" prefWidth="149.0" text="Selecione a placa ">
-         <font>
-            <Font name="Arial Black" size="14.0" />
-         </font>
-      </Label>
-      <Label layoutX="32.0" layoutY="84.0" prefHeight="22.0" prefWidth="156.0" text="do carro que deseja">
-         <font>
-            <Font name="Arial Black" size="14.0" />
-         </font>
-      </Label>
-      <Label layoutX="65.0" layoutY="101.0" prefHeight="22.0" prefWidth="93.0" text="abastecer:">
-         <font>
-            <Font name="Arial Black" size="14.0" />
-         </font>
-      </Label>
-      <ChoiceBox fx:id="CBcombustivel" layoutX="36.0" layoutY="203.0" onMouseClicked="#mostraCombustiveis" prefHeight="25.0" prefWidth="149.0" />
-      <TextField fx:id="txtValOd" layoutX="32.0" layoutY="337.0" onAction="#defineValOd" />
-   </children>
+<Pane fx:id="paneAbastAuto" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+      prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #6fcdb6;"
+      xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="ControllerAbastecerAutomovel">
+   <Label layoutX="120.0" layoutY="14.0" prefHeight="46.0" prefWidth="348.0" text="ABASTECER AUTOMÓVEL">
+      <font>
+         <Font name="Arial Black" size="24.0"/>
+      </font>
+   </Label>
+   <Label layoutX="28.0" layoutY="174.0" prefHeight="22.0" prefWidth="168.0" text="Tipo de combustível:">
+      <font>
+         <Font name="Arial Black" size="14.0"/>
+      </font>
+   </Label>
+   <Label layoutX="32.0" layoutY="242.0" prefHeight="22.0" prefWidth="67.0" text="Data:">
+      <font>
+         <Font name="Arial Black" size="14.0"/>
+      </font>
+   </Label>
+   <Label layoutX="32.0" layoutY="307.0" prefHeight="22.0" prefWidth="149.0" text="Valor Odômetro:">
+      <font>
+         <Font name="Arial Black" size="14.0"/>
+      </font>
+   </Label>
+   <Label layoutX="274.0" layoutY="95.0" prefHeight="22.0" prefWidth="192.0" text="Quantidade de Litros:">
+      <font>
+         <Font name="Arial Black" size="14.0"/>
+      </font>
+   </Label>
+   <Label layoutX="278.0" layoutY="174.0" prefHeight="22.0" prefWidth="185.0" text="Custo Total:">
+      <font>
+         <Font name="Arial Black" size="14.0"/>
+      </font>
+   </Label>
+   <Label layoutX="278.0" layoutY="242.0" prefHeight="22.0" prefWidth="124.0" text="Preço por Litro:">
+      <font>
+         <Font name="Arial Black" size="14.0"/>
+      </font>
+   </Label>
+   <TextField fx:id="txtData" layoutX="36.0" layoutY="265.0" onAction="#defineData" text="yyyy-mm-dd"/>
+   <TextField fx:id="txtQtLitros" layoutX="285.0" layoutY="126.0" onAction="#defineQtLitros"/>
+   <TextField fx:id="txtCustoTotal" layoutX="285.0" layoutY="203.0" onAction="#defineCustoTotal"/>
+   <TextField fx:id="txtPrecoPorLitro" layoutX="285.0" layoutY="265.0" onAction="#definePrecoPorLitro"/>
+   <Button fx:id="botaoCadastrar" layoutX="434.0" layoutY="347.0" mnemonicParsing="false" onAction="#abastecerAuto"
+           text="ABASTECER">
+      <font>
+         <Font name="Arial Black" size="13.0"/>
+      </font>
+   </Button>
+   <ChoiceBox fx:id="CBplaca" layoutX="36.0" layoutY="126.0" onMouseClicked="#mostraPlacas" prefHeight="25.0"
+              prefWidth="149.0"/>
+   <Label layoutX="37.0" layoutY="68.0" prefHeight="22.0" prefWidth="149.0" text="Selecione a placa ">
+      <font>
+         <Font name="Arial Black" size="14.0"/>
+      </font>
+   </Label>
+   <Label layoutX="32.0" layoutY="84.0" prefHeight="22.0" prefWidth="156.0" text="do carro que deseja">
+      <font>
+         <Font name="Arial Black" size="14.0"/>
+      </font>
+   </Label>
+   <Label layoutX="65.0" layoutY="101.0" prefHeight="22.0" prefWidth="93.0" text="abastecer:">
+      <font>
+         <Font name="Arial Black" size="14.0"/>
+      </font>
+   </Label>
+   <ChoiceBox fx:id="CBcombustivel" layoutX="36.0" layoutY="203.0" onMouseClicked="#mostraCombustiveis"
+              prefHeight="25.0" prefWidth="149.0"/>
+   <TextField fx:id="txtValOd" layoutX="32.0" layoutY="337.0" onAction="#defineValOd"/>
 </Pane>

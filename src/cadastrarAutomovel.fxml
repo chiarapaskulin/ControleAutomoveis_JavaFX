@@ -6,63 +6,65 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane fx:id="paneCadAuto" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #6fcdb6;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
-   <children>
-      <Label layoutX="128.0" layoutY="14.0" prefHeight="46.0" prefWidth="345.0" text="CADASTRAR AUTOMÓVEL">
-         <font>
-            <Font name="Arial Black" size="24.0" />
-         </font>
-      </Label>
-      <Label layoutX="169.0" layoutY="81.0" prefHeight="22.0" prefWidth="52.0" text="Placa:">
-         <font>
-            <Font name="Arial Black" size="14.0" />
-         </font>
-      </Label>
-      <Label layoutX="169.0" layoutY="119.0" prefHeight="22.0" prefWidth="67.0" text="Modelo:">
-         <font>
-            <Font name="Arial Black" size="14.0" />
-         </font>
-      </Label>
-      <Label layoutX="168.0" layoutY="159.0" prefHeight="22.0" prefWidth="36.0" text="Ano:">
-         <font>
-            <Font name="Arial Black" size="14.0" />
-         </font>
-      </Label>
-      <Label layoutX="169.0" layoutY="201.0" prefHeight="22.0" prefWidth="93.0" text="Fabricante:">
-         <font>
-            <Font name="Arial Black" size="14.0" />
-         </font>
-      </Label>
-      <Label layoutX="170.0" layoutY="238.0" prefHeight="22.0" prefWidth="185.0" text="Capacidade">
-         <font>
-            <Font name="Arial Black" size="14.0" />
-         </font>
-      </Label>
-      <Label layoutX="170.0" layoutY="255.0" prefHeight="22.0" prefWidth="93.0" text="do Tanque:">
-         <font>
-            <Font name="Arial Black" size="14.0" />
-         </font>
-      </Label>
-      <Label layoutX="169.0" layoutY="287.0" prefHeight="22.0" prefWidth="67.0" text="Valor do">
-         <font>
-            <Font name="Arial Black" size="14.0" />
-         </font>
-      </Label>
-      <Label layoutX="169.0" layoutY="303.0" prefHeight="22.0" prefWidth="93.0" text="Odômetro:">
-         <font>
-            <Font name="Arial Black" size="14.0" />
-         </font>
-      </Label>
-      <TextField fx:id="txtPlaca" layoutX="290.0" layoutY="80.0" onAction="#escrevePlaca" />
-      <TextField fx:id="txtModelo" layoutX="290.0" layoutY="118.0" onAction="#escreveModelo" />
-      <TextField fx:id="txtAno" layoutX="289.0" layoutY="158.0" onAction="#escreveAno" />
-      <TextField fx:id="txtFabricante" layoutX="290.0" layoutY="200.0" onAction="#escreveFabricante" />
-      <TextField fx:id="txtCapTanque" layoutX="290.0" layoutY="248.0" onAction="#escreveCapTanque" />
-      <TextField fx:id="txtValOd" layoutX="290.0" layoutY="297.0" onAction="#escreveValOd" />
-      <Button fx:id="botaoCadastrar" layoutX="439.0" layoutY="344.0" mnemonicParsing="false" onAction="#cadastrarAutomovel" text="CADASTRAR">
-         <font>
-            <Font name="Arial Black" size="13.0" />
-         </font>
-      </Button>
-   </children>
+<Pane fx:id="paneCadAuto" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+      prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #6fcdb6;"
+      xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="ControllerCadastrarAutomovel">
+   <Label layoutX="128.0" layoutY="14.0" prefHeight="46.0" prefWidth="345.0" text="CADASTRAR AUTOMÓVEL">
+      <font>
+         <Font name="Arial Black" size="24.0"/>
+      </font>
+   </Label>
+   <Label layoutX="169.0" layoutY="81.0" prefHeight="22.0" prefWidth="52.0" text="Placa:">
+      <font>
+         <Font name="Arial Black" size="14.0"/>
+      </font>
+   </Label>
+   <Label layoutX="169.0" layoutY="119.0" prefHeight="22.0" prefWidth="67.0" text="Modelo:">
+      <font>
+         <Font name="Arial Black" size="14.0"/>
+      </font>
+   </Label>
+   <Label layoutX="168.0" layoutY="159.0" prefHeight="22.0" prefWidth="36.0" text="Ano:">
+      <font>
+         <Font name="Arial Black" size="14.0"/>
+      </font>
+   </Label>
+   <Label layoutX="169.0" layoutY="201.0" prefHeight="22.0" prefWidth="93.0" text="Fabricante:">
+      <font>
+         <Font name="Arial Black" size="14.0"/>
+      </font>
+   </Label>
+   <Label layoutX="170.0" layoutY="238.0" prefHeight="22.0" prefWidth="185.0" text="Capacidade">
+      <font>
+         <Font name="Arial Black" size="14.0"/>
+      </font>
+   </Label>
+   <Label layoutX="170.0" layoutY="255.0" prefHeight="22.0" prefWidth="93.0" text="do Tanque:">
+      <font>
+         <Font name="Arial Black" size="14.0"/>
+      </font>
+   </Label>
+   <Label layoutX="169.0" layoutY="287.0" prefHeight="22.0" prefWidth="67.0" text="Valor do">
+      <font>
+         <Font name="Arial Black" size="14.0"/>
+      </font>
+   </Label>
+   <Label layoutX="169.0" layoutY="303.0" prefHeight="22.0" prefWidth="93.0" text="Odômetro:">
+      <font>
+         <Font name="Arial Black" size="14.0"/>
+      </font>
+   </Label>
+   <TextField fx:id="txtPlaca" layoutX="290.0" layoutY="80.0" onAction="#escrevePlaca"/>
+   <TextField fx:id="txtModelo" layoutX="290.0" layoutY="118.0" onAction="#escreveModelo"/>
+   <TextField fx:id="txtAno" layoutX="289.0" layoutY="158.0" onAction="#escreveAno"/>
+   <TextField fx:id="txtFabricante" layoutX="290.0" layoutY="200.0" onAction="#escreveFabricante"/>
+   <TextField fx:id="txtCapTanque" layoutX="290.0" layoutY="248.0" onAction="#escreveCapTanque"/>
+   <TextField fx:id="txtValOd" layoutX="290.0" layoutY="297.0" onAction="#escreveValOd"/>
+   <Button fx:id="botaoCadastrar" layoutX="439.0" layoutY="344.0" mnemonicParsing="false" onAction="#cadastrarAutomovel"
+           text="CADASTRAR">
+      <font>
+         <Font name="Arial Black" size="13.0"/>
+      </font>
+   </Button>
 </Pane>
