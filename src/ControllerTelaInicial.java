@@ -75,9 +75,8 @@ public class ControllerTelaInicial implements Initializable{
         FXMLLoader loader = new FXMLLoader(getClass().getResource("abastecerAutomovel.fxml"));
         Parent root = loader.load();
 
-        ControllerAbastecerAutomovel abastecerAutomovel = loader.getController();
-        abastecerAutomovel.setConjAuto(this.conjAuto);
-        abastecerAutomovel.setConjAbast(this.conjAbast);
+        //ControllerAbastecerAutomovel contrl = new ControllerAbastecerAutomovel(conjAuto);
+        //loader.setController(contrl);
 
         Stage stg = new Stage();
         stg.setTitle("Abastecer Automóvel");
@@ -90,8 +89,8 @@ public class ControllerTelaInicial implements Initializable{
         FXMLLoader loader = new FXMLLoader(getClass().getResource("cadastrarAutomovel.fxml"));
         Parent root = loader.load();
 
-        ControllerCadastrarAutomovel cadastrarAutomovel = loader.getController();
-        cadastrarAutomovel.setConjAuto(this.conjAuto);
+        //ControllerCadastrarAutomovel cadastrarAutomovel = loader.getController();
+        //cadastrarAutomovel.setConjAuto(this.conjAuto);
 
         Stage stg = new Stage();
         stg.setTitle("Cadastrar Automóvel");
@@ -132,7 +131,7 @@ public class ControllerTelaInicial implements Initializable{
         FXMLLoader loader = new FXMLLoader(getClass().getResource("visualizarAutomovel2.fxml"));
         Parent root = loader.load();
 
-        //ControllerVisualizarAutomovel2 visualizarAutomovel = loader.getController();
+        //ControllerVisualizarAutomovel visualizarAutomovel = loader.getController();
         //visualizarAutomovel.setConjAuto(this.conjAuto);
 
         Stage stg = new Stage();

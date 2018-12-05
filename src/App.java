@@ -19,12 +19,18 @@ public class App extends Application{
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("telaInicial.fxml"));
-        Parent root = loader.load();
 
         ConjuntoAutomoveis autos = new ConjuntoAutomoveis();
+        autos.addAutomovel(new Automovel("IYO-8574", "Polo MSI", 2018, "Volksvagen", 45, 4700.0));
+        autos.addAutomovel(new Automovel("JUD-9163", "Corolla", 2018, "Toyota", 47, 0.0));
+        autos.addAutomovel(new Automovel("IZB-2738", "Celta", 1999, "Chevrolet", 35,90000.0));
+        autos.addAutomovel(new Automovel("JRF-1056", "Palio", 2009, "Fiat", 40, 30000.0));
+        autos.addAutomovel(new Automovel("IGS-2794", "Focus", 2017, "Ford", 45, 10000.0));
+        autos.addAutomovel(new Automovel("JFN-1485", "Amarok", 2018, "Volksvagen", 50, 20.0));
         ConjuntoAbastecimentos abastecimentos = new ConjuntoAbastecimentos();
 
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("telaInicial.fxml"));
+        Parent root = loader.load();
         ControllerTelaInicial telaInicial = loader.getController();
         telaInicial.setConjAuto(autos);
         telaInicial.setConjAbast(abastecimentos);
@@ -36,5 +42,9 @@ public class App extends Application{
 
     public static void main(String[] args) {
         launch(args);
+    }
+
+    public static void populaAutos(ConjuntoAutomoveis autos){
+
     }
 }

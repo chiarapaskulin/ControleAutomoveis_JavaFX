@@ -80,6 +80,13 @@ public class Automovel {
         this.abastecimentos = abastecimentos;
     }
 
+    public boolean addAbastecimento(Abastecimento abast){
+        if(abastecimentos.add(abast)){
+            return true;
+        }
+        return false;
+    }
+
     public double mediaVolumeAbast(){
         double total = 0;
         for(Abastecimento abast: abastecimentos){
