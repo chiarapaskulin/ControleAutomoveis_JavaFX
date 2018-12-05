@@ -45,7 +45,7 @@ public class ControllerTelaInicial implements Initializable{
 
     @Override
     public void initialize(URL url, ResourceBundle rb){
-        //TODO
+        if(conjAbast==null) System.out.println("null");
     }
 
     public void setConjAuto(ConjuntoAutomoveis conjAuto){
